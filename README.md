@@ -40,3 +40,10 @@ If you need a strictly empty list for the unit, special-case `1` yourself.
 
 Inputs above `2^53 − 1` throw `RangeError` rather than silently producing wrong
 factors from floating-point rounding. Non-integers throw `TypeError`.
+
+## Design notes
+
+The window stores values eagerly rather than keeping running aggregates. Running
+sums drift with floating point over long streams, and recomputing from a small
+buffer is cheap enough that the drift is not worth the speed.
+
