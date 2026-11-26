@@ -1,6 +1,6 @@
 {
   "name": "pollard-rho-factorization",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Uses Miller-Rabin and Pollard's rho to split big integers into prime factors.",
   "type": "module",
   "main": "src/index.js",
